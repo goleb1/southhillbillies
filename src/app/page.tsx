@@ -1,45 +1,113 @@
-import Link from "next/link";
+'use client';
+
+import React, { useState } from 'react';
+import DistanceSelector from '@/components/DistanceSelector';
+import TimeInput from '@/components/TimeInput';
+import PaceTable from '@/components/PaceTable';
+import SpeedDisplay from '@/components/SpeedDisplay';
+import { distanceOptions, generatePaceData } from '@/lib/paceCalculator';
 
 export default function Home() {
+  const [selectedDistance, setSelectedDistance] = useState<string>(distanceOptions[7].value); // Default to 1 mile
+  const [timeInput, setTimeInput] = useState<string>('');
+  const [calculationResults, setCalculationResults] = useState<any>(null);
+
+  const handleCalculate = () => {
+    if (!selectedDistance || !timeInput) return;
+    
+    const results = generatePaceData(selectedDistance, timeInput);
+    setCalculationResults(results);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8">
-      <div>
-        <h2 className="text-2xl font-semibold text-center border p-4 font-mono rounded-md">
-          Get started by choosing a template path from the /paths/ folder.
-        </h2>
-      </div>
-      <div>
-        <h1 className="text-6xl font-bold text-center">Make anything you imagine 🪄</h1>
-        <h2 className="text-2xl text-center font-light text-gray-500 pt-4">
-          This whole page will be replaced when you run your template path.
-        </h2>
-      </div>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="border rounded-lg p-6 hover:bg-gray-100 transition-colors">
-          <h3 className="text-xl font-semibold">AI Chat App</h3>
-          <p className="mt-2 text-sm text-gray-600">
-            An intelligent conversational app powered by AI models, featuring real-time responses
-            and seamless integration with Next.js and various AI providers.
-          </p>
+    <main className="min-h-screen p-3 sm:p-6 bg-fall">
+      <div className="max-w-7xl mx-auto pt-4">
+        {/* Title in donkey brown bar */}
+        <div className="bg-donkey rounded-t-lg py-4 px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold text-center text-thunder">Pace Conversion Calculator</h1>
         </div>
-        <div className="border rounded-lg p-6 hover:bg-gray-100 transition-colors">
-          <h3 className="text-xl font-semibold">AI Image Generation App</h3>
-          <p className="mt-2 text-sm text-gray-600">
-            Create images from text prompts using AI, powered by the Replicate API and Next.js.
-          </p>
+        
+        <div className="bg-white p-3 sm:p-6 rounded-b-lg shadow-md mb-4 sm:mb-6 border-x border-b border-danube">
+          <div className="grid grid-cols-1 gap-3 sm:gap-6">
+            {/* Mobile layout - stacked */}
+            <div className="block lg:hidden">
+              <div className="mb-3">
+                <label className="block text-sm font-medium text-thunder mb-1 sm:mb-2">Distance</label>
+                <DistanceSelector 
+                  selectedDistance={selectedDistance} 
+                  onDistanceChange={setSelectedDistance} 
+                />
+              </div>
+              
+              <div className="mb-3">
+                <label className="block text-sm font-medium text-thunder mb-1 sm:mb-2">Time</label>
+                <TimeInput 
+                  value={timeInput} 
+                  onChange={setTimeInput} 
+                />
+              </div>
+              
+              <div>
+                <button
+                  onClick={handleCalculate}
+                  className="w-full bg-chambray hover:bg-danube text-white font-medium py-1.5 sm:py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-danube focus:ring-offset-2 transition-colors"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+            
+            {/* Desktop layout - side by side */}
+            <div className="hidden lg:grid lg:grid-cols-3 lg:gap-6">
+              <div>
+                <label className="block text-sm font-medium text-thunder mb-2">Distance</label>
+                <div className="flex flex-col">
+                  <div className="h-[24px]"></div> {/* Spacer to align with time input arrows */}
+                  <DistanceSelector 
+                    selectedDistance={selectedDistance} 
+                    onDistanceChange={setSelectedDistance} 
+                  />
+                  <div className="h-[52px]"></div> {/* Spacer to align with time input labels */}
+                </div>
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-thunder mb-2">Time</label>
+                <TimeInput 
+                  value={timeInput} 
+                  onChange={setTimeInput} 
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-thunder mb-2 opacity-0">Action</label>
+                <div className="flex flex-col">
+                  <div className="h-[24px]"></div> {/* Spacer to align with time input arrows */}
+                  <button
+                    onClick={handleCalculate}
+                    className="w-full bg-chambray hover:bg-danube text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-danube focus:ring-offset-2 transition-colors"
+                  >
+                    Calculate
+                  </button>
+                  <div className="h-[52px]"></div> {/* Spacer to align with time input labels */}
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {calculationResults && (
+            <SpeedDisplay 
+              milesPerHour={calculationResults.paceData.milesPerHour} 
+              kmPerHour={calculationResults.paceData.kmPerHour} 
+            />
+          )}
         </div>
-        <div className="border rounded-lg p-6 hover:bg-gray-100 transition-colors">
-          <h3 className="text-xl font-semibold">Social Media App</h3>
-          <p className="mt-2 text-sm text-gray-600">
-            A feature-rich social platform with user profiles, posts, and interactions using
-            Firebase and Next.js.
-          </p>
-        </div>
-        <div className="border rounded-lg p-6 hover:bg-gray-100 transition-colors">
-          <h3 className="text-xl font-semibold">Voice Notes App</h3>
-          <p className="mt-2 text-sm text-gray-600">
-            A voice-based note-taking app with real-time transcription using Deepgram API, 
-            Firebase integration for storage, and a clean, simple interface built with Next.js.
+        
+        <PaceTable results={calculationResults?.results || null} />
+        
+        <div className="mt-4 sm:mt-8 text-center text-xs sm:text-sm text-thunder">
+          <p>
+            <em>South Hillbillies A.C. © 2018</em>
           </p>
         </div>
       </div>
