@@ -336,12 +336,12 @@ export default function PaceTable({ results }: PaceTableProps) {
               )}
               {visibleColumns.worldRecordMen && (
                 <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
-                  Men's WR
+                  Men&apos;s WR
                 </th>
               )}
               {visibleColumns.worldRecordWomen && (
                 <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
-                  Women's WR
+                  Women&apos;s WR
                 </th>
               )}
             </tr>
