@@ -50,6 +50,26 @@ export const inventory: Product[] = [
     ],
   },
 
+  // ── Crewneck ───────────────────────────────────────────────────────────────
+  {
+    id: 'crewneck',
+    name: 'Crewneck',
+    price: 35,
+    image: '/img/crewneck.png',
+    description: 'Blank crewneck ordered and a patch applied.',
+    stock: 'mto',
+  },
+
+  // ── Beanie ─────────────────────────────────────────────────────────────────
+  {
+    id: 'beanie',
+    name: 'Beanie',
+    price: 20,
+    image: '/img/beanie.png',
+    description: 'Blank beanie ordered and a patch sewn on.',
+    stock: 'mto',
+  },
+
   // ── Bandana ────────────────────────────────────────────────────────────────
   {
     id: 'bandana',
@@ -68,13 +88,14 @@ export const inventory: Product[] = [
     stock: 14,
   },
 
-  // ── Sticker ────────────────────────────────────────────────────────────────
+  // ── Big Patch ──────────────────────────────────────────────────────────────
   {
-    id: 'sticker',
-    name: 'Sticker',
-    price: 1,
-    image: '/img/sticker.png',
-    stock: 24,
+    id: 'big-patch',
+    name: 'Big Patch',
+    price: 3,
+    image: '/img/bigPatch.png',
+    description: 'Embroidered iron-on / sew-on patch.',
+    stock: 90,
   },
 
   // ── Small Patch ────────────────────────────────────────────────────────────
@@ -87,33 +108,12 @@ export const inventory: Product[] = [
     stock: 58,
   },
 
-  // ── Big Patch ──────────────────────────────────────────────────────────────
+  // ── Sticker ────────────────────────────────────────────────────────────────
   {
-    id: 'big-patch',
-    name: 'Big Patch',
-    price: 3,
-    image: '/img/bigPatch.png',
-    description: 'Embroidered iron-on / sew-on patch.',
-    stock: 90,
-  },
-
-  // ── Beanie ─────────────────────────────────────────────────────────────────
-  {
-    id: 'beanie',
-    name: 'Beanie',
-    price: 20,
-    image: '/img/beanie.png',
-    description: 'Blank beanie ordered and a patch sewn on.',
-    stock: 'mto',
-  },
-
-  // ── Crewneck ───────────────────────────────────────────────────────────────
-  {
-    id: 'crewneck',
-    name: 'Crewneck',
-    price: 35,
-    image: '/img/crewneck.png',
-    description: 'Blank crewneck ordered and a patch applied.',
-    stock: 'mto',
+    id: 'sticker',
+    name: 'Sticker',
+    price: 1,
+    image: '/img/sticker.png',
+    stock: 24,
   },
 ];

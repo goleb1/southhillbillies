@@ -22,9 +22,18 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-3 sm:space-x-6 text-sm sm:text-base">
             <li>
-              <a 
-                href="https://www.strava.com/clubs/southhillibillies" 
-                target="_blank" 
+              <Link
+                href="/merch"
+                className="text-white hover:text-melrose transition-colors flex items-center"
+              >
+                <ShoppingBag className="w-4 h-4 mr-1.5 flex-shrink-0" />
+                <span>Merch</span>
+              </Link>
+            </li>
+            <li>
+              <a
+                href="https://www.strava.com/clubs/southhillibillies"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-melrose transition-colors flex items-center"
               >
@@ -35,18 +44,9 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <Link
-                href="/merch"
-                className="text-white hover:text-melrose transition-colors flex items-center"
-              >
-                <ShoppingBag className="w-4 h-4 mr-1.5 flex-shrink-0" />
-                <span>Merch</span>
-              </Link>
-            </li>
-            <li>
-              <a 
-                href="https://southhillbillies.substack.com/" 
-                target="_blank" 
+              <a
+                href="https://southhillbillies.substack.com/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-melrose transition-colors flex items-center"
               >
