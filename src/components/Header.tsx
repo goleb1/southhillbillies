@@ -7,17 +7,17 @@ const Header = () => {
   return (
     <header className="bg-chambray text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-center justify-between">
-        <div className="flex items-center mb-3 sm:mb-0">
+        <Link href="/" className="flex items-center mb-3 sm:mb-0 hover:opacity-80 transition-opacity">
           <div className="relative h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3">
-            <Image 
-              src="/SHB_logo.png" 
-              alt="South Hillbillies Logo" 
+            <Image
+              src="/SHB_logo.png"
+              alt="South Hillbillies Logo"
               fill
               className="object-contain"
             />
           </div>
           <h1 className="text-lg sm:text-xl font-bold text-white">South Hillbillies A.C.</h1>
-        </div>
+        </Link>
         
         <nav>
           <ul className="flex space-x-3 sm:space-x-6 text-sm sm:text-base">
