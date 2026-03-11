@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ShoppingBag } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -34,18 +35,13 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a 
-                href="https://www.southhillbillies.xyz/" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link
+                href="/merch"
                 className="text-white hover:text-melrose transition-colors flex items-center"
               >
-                <svg className="w-4 h-4 mr-1.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <path d="M9 22V12h6v10" />
-                </svg>
-                <span>Shop</span>
-              </a>
+                <ShoppingBag className="w-4 h-4 mr-1.5 flex-shrink-0" />
+                <span>Merch</span>
+              </Link>
             </li>
             <li>
               <a 
