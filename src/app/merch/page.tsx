@@ -22,7 +22,7 @@ export default function MerchPage() {
           </div>
           <div className="bg-white rounded-b-lg border-x border-b border-danube px-4 py-3 text-center">
             <p className="text-sm text-gray-600">
-              This is a catalog, not a store — pick what you want, fill out the form below, and James will sort it out.
+              This is a catalog, not a store. Pick what you want, fill out the form below, and James will sort it out.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function MerchPage() {
           <span className="text-2xl flex-shrink-0" aria-hidden>🧵</span>
           <p className="text-sm text-gray-700">
             <span className="font-semibold text-thunder">Got something you want a patch on?</span>{' '}
-            We can sew it for you — just ask. Works on your own gear or on a made-to-order beanie or crewneck.
+            We can sew it for you, just ask! Works on your own gear or on a made-to-order beanie or crewneck.
           </p>
         </div>
 

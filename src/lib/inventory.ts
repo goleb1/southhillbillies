@@ -56,7 +56,7 @@ export const inventory: Product[] = [
     name: 'Crewneck',
     price: 35,
     image: '/img/crewneck.png',
-    description: 'Blank crewneck ordered and a patch applied.',
+    description: 'Cozy grey crewneck (unisex sizing).',
     stock: 'mto',
   },
 
@@ -66,7 +66,7 @@ export const inventory: Product[] = [
     name: 'Beanie',
     price: 20,
     image: '/img/beanie.png',
-    description: 'Blank beanie ordered and a patch sewn on.',
+    description: 'Grey, blue, or gold beanie.',
     stock: 'mto',
   },
 
@@ -94,7 +94,7 @@ export const inventory: Product[] = [
     name: 'Big Patch',
     price: 3,
     image: '/img/bigPatch.png',
-    description: 'Embroidered iron-on / sew-on patch.',
+    description: 'Embroidered 2.5" sew-on patch.',
     stock: 90,
   },
 
@@ -104,7 +104,7 @@ export const inventory: Product[] = [
     name: 'Small Patch',
     price: 3,
     image: '/img/smallPatch.png',
-    description: 'Embroidered iron-on / sew-on patch.',
+    description: 'Embroidered 1.5" sew-on patch.',
     stock: 58,
   },
 
