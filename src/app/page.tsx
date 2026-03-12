@@ -43,67 +43,31 @@ export default function Home() {
         </div>
 
         <div className="bg-white p-3 sm:p-6 rounded-b-lg shadow-md mb-4 sm:mb-6 border-x border-b border-danube">
-          <div className="grid grid-cols-1 gap-3 sm:gap-6">
-            {/* Mobile layout - stacked */}
-            <div className="block lg:hidden">
-              <div className="mb-3">
-                <label className="block text-sm font-medium text-thunder mb-1 sm:mb-2">Distance</label>
-                <DistanceSelector
-                  selectedDistance={selectedDistance}
-                  onDistanceChange={setSelectedDistance}
-                />
-              </div>
-
-              <div className="mb-3">
-                <label className="block text-sm font-medium text-thunder mb-1 sm:mb-2">Time</label>
-                <TimeInput
-                  hours={time.hours}
-                  minutes={time.minutes}
-                  seconds={time.seconds}
-                  onFieldChange={handleFieldChange}
-                />
-              </div>
-
-              <div>
-                <button
-                  onClick={handleCalculate}
-                  className="w-full bg-chambray hover:bg-danube text-white font-medium py-1.5 sm:py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-danube focus:ring-offset-2 transition-colors"
-                >
-                  Calculate
-                </button>
-              </div>
+          <div className="flex flex-col gap-3 sm:gap-4 max-w-sm mx-auto w-full">
+            <div>
+              <label className="block text-sm font-medium text-thunder mb-1 sm:mb-2">Distance</label>
+              <DistanceSelector
+                selectedDistance={selectedDistance}
+                onDistanceChange={setSelectedDistance}
+              />
             </div>
 
-            {/* Desktop layout - side by side */}
-            <div className="hidden lg:grid lg:grid-cols-3 lg:gap-6 lg:items-start">
-              <div>
-                <label className="block text-sm font-medium text-thunder mb-2">Distance</label>
-                <DistanceSelector
-                  selectedDistance={selectedDistance}
-                  onDistanceChange={setSelectedDistance}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-thunder mb-2">Time</label>
-                <TimeInput
-                  hours={time.hours}
-                  minutes={time.minutes}
-                  seconds={time.seconds}
-                  onFieldChange={handleFieldChange}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-thunder mb-2 opacity-0">Action</label>
-                <button
-                  onClick={handleCalculate}
-                  className="w-full bg-chambray hover:bg-danube text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-danube focus:ring-offset-2 transition-colors"
-                >
-                  Calculate
-                </button>
-              </div>
+            <div>
+              <label className="block text-sm font-medium text-thunder mb-1 sm:mb-2">Time</label>
+              <TimeInput
+                hours={time.hours}
+                minutes={time.minutes}
+                seconds={time.seconds}
+                onFieldChange={handleFieldChange}
+              />
             </div>
+
+            <button
+              onClick={handleCalculate}
+              className="w-full bg-chambray hover:bg-danube text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-danube focus:ring-offset-2 transition-colors"
+            >
+              Calculate
+            </button>
           </div>
 
           {calculationResults && (
