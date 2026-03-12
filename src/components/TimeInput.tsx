@@ -29,7 +29,7 @@ function ScrollColumn({
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isScrollingRef = useRef(false);
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const scrollToValue = useCallback(
     (value: number, smooth = false) => {
