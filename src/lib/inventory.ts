@@ -76,6 +76,7 @@ export const inventory: Product[] = [
     name: 'Bandana',
     price: 5,
     image: '/img/bandana.png',
+    description: 'Lightweight 22"x22" bandana bearing all things SHB.',
     stock: 21,
   },
 
@@ -85,6 +86,7 @@ export const inventory: Product[] = [
     name: 'Koozie',
     price: 5,
     image: '/img/koozie.png',
+    description: 'Neoprene koozie to keep your drinks cold and/or your hands warm.',
     stock: 14,
   },
 
@@ -114,6 +116,7 @@ export const inventory: Product[] = [
     name: 'Sticker',
     price: 1,
     image: '/img/sticker.png',
+    description: '3" vinyl sticker.',
     stock: 24,
   },
 ];
