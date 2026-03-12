@@ -16,17 +16,17 @@ const Header = () => {
               className="object-contain"
             />
           </div>
-          <h1 className="text-lg sm:text-xl font-bold text-white">South Hillbillies A.C.</h1>
+          <h1 className="text-xl sm:text-2xl font-serif italic text-white">South Hillbillies A.C.</h1>
         </Link>
         
         <nav>
-          <ul className="flex space-x-3 sm:space-x-6 text-sm sm:text-base">
+          <ul className="flex space-x-6 sm:space-x-8">
             <li>
               <Link
                 href="/merch"
-                className="text-white hover:text-melrose transition-colors flex items-center"
+                className="text-white hover:text-melrose transition-colors flex items-center gap-1.5 text-xs uppercase tracking-widest"
               >
-                <ShoppingBag className="w-4 h-4 mr-1.5 flex-shrink-0" />
+                <ShoppingBag className="w-3.5 h-3.5 flex-shrink-0" />
                 <span>Merch</span>
               </Link>
             </li>
@@ -35,9 +35,9 @@ const Header = () => {
                 href="https://www.strava.com/clubs/southhillibillies"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-melrose transition-colors flex items-center"
+                className="text-white hover:text-melrose transition-colors flex items-center gap-1.5 text-xs uppercase tracking-widest"
               >
-                <svg className="w-4 h-4 mr-1.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
                 </svg>
                 <span>Strava</span>
@@ -48,9 +48,9 @@ const Header = () => {
                 href="https://southhillbillies.substack.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-melrose transition-colors flex items-center"
+                className="text-white hover:text-melrose transition-colors flex items-center gap-1.5 text-xs uppercase tracking-widest"
               >
-                <svg className="w-4 h-4 mr-1.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
                 </svg>
                 <span>Workouts</span>

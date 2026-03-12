@@ -161,41 +161,41 @@ export default function PaceTable({ results }: PaceTableProps) {
   return (
     <div className="mt-8">
       <div className="mb-4">
-        <h2 className="text-lg font-semibold mb-2 text-thunder">View Options:</h2>
+        <h2 className="text-lg font-serif uppercase tracking-wide mb-2 text-thunder">View Options</h2>
         <div className="flex flex-wrap gap-2 mb-3">
           <button 
             onClick={() => applyPreset("minimal")}
-            className={`px-3 py-1.5 text-xs sm:text-sm rounded-md ${activePreset === "minimal" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
+            className={`px-3 py-1.5 text-xs uppercase tracking-widest rounded ${activePreset === "minimal" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
           >
             Minimal
           </button>
           <button 
             onClick={() => applyPreset("records")}
-            className={`px-3 py-1.5 text-xs sm:text-sm rounded-md ${activePreset === "records" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
+            className={`px-3 py-1.5 text-xs uppercase tracking-widest rounded ${activePreset === "records" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
           >
             Records
           </button>
           <button 
             onClick={() => applyPreset("compact")}
-            className={`px-3 py-1.5 text-xs sm:text-sm rounded-md ${activePreset === "compact" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
+            className={`px-3 py-1.5 text-xs uppercase tracking-widest rounded ${activePreset === "compact" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
           >
             Compact
           </button>
           <button 
             onClick={() => applyPreset("slower")}
-            className={`px-3 py-1.5 text-xs sm:text-sm rounded-md ${activePreset === "slower" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
+            className={`px-3 py-1.5 text-xs uppercase tracking-widest rounded ${activePreset === "slower" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
           >
             Slower
           </button>
           <button 
             onClick={() => applyPreset("faster")}
-            className={`px-3 py-1.5 text-xs sm:text-sm rounded-md ${activePreset === "faster" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
+            className={`px-3 py-1.5 text-xs uppercase tracking-widest rounded ${activePreset === "faster" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
           >
             Faster
           </button>
           <button 
             onClick={() => applyPreset("all")}
-            className={`px-3 py-1.5 text-xs sm:text-sm rounded-md ${activePreset === "all" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
+            className={`px-3 py-1.5 text-xs uppercase tracking-widest rounded ${activePreset === "all" ? 'bg-chambray text-white' : 'bg-melrose/30 text-thunder'}`}
           >
             All
           </button>
@@ -211,67 +211,67 @@ export default function PaceTable({ results }: PaceTableProps) {
           <div className="mt-2 flex flex-wrap gap-2 p-3 bg-fall rounded-md">
             <button 
               onClick={() => toggleColumn('category')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.category ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.category ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               Type
             </button>
             <button 
               onClick={() => toggleColumn('distance')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.distance ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.distance ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               Event
             </button>
             <button 
               onClick={() => toggleColumn('time25pctSlower')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.time25pctSlower ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.time25pctSlower ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               25% Slower
             </button>
             <button 
               onClick={() => toggleColumn('time10pctSlower')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.time10pctSlower ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.time10pctSlower ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               10% Slower
             </button>
             <button 
               onClick={() => toggleColumn('time5pctSlower')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.time5pctSlower ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.time5pctSlower ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               5% Slower
             </button>
             <button 
               onClick={() => toggleColumn('time')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.time ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.time ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               Time
             </button>
             <button 
               onClick={() => toggleColumn('time5pctFaster')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.time5pctFaster ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.time5pctFaster ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               5% Faster
             </button>
             <button 
               onClick={() => toggleColumn('time10pctFaster')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.time10pctFaster ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.time10pctFaster ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               10% Faster
             </button>
             <button 
               onClick={() => toggleColumn('time25pctFaster')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.time25pctFaster ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.time25pctFaster ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               25% Faster
             </button>
             <button 
               onClick={() => toggleColumn('worldRecordMen')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.worldRecordMen ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.worldRecordMen ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               WR (M)
             </button>
             <button 
               onClick={() => toggleColumn('worldRecordWomen')}
-              className={`px-2 py-1 text-xs rounded ${visibleColumns.worldRecordWomen ? 'bg-chambray text-white' : 'bg-gray-200 text-thunder'}`}
+              className={`px-2 py-1 text-xs rounded ${visibleColumns.worldRecordWomen ? 'bg-chambray text-white' : 'bg-melrose/20 text-thunder'}`}
             >
               WR (W)
             </button>
@@ -290,57 +290,57 @@ export default function PaceTable({ results }: PaceTableProps) {
           <thead className="bg-melrose/30">
             <tr>
               {visibleColumns.category && (
-                <th scope="col" className={`${headerPadding} text-left ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-left ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   Type
                 </th>
               )}
               {visibleColumns.distance && (
-                <th scope="col" className={`${headerPadding} text-left ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-left ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   Event
                 </th>
               )}
               {visibleColumns.time25pctSlower && (
-                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   25% Slower
                 </th>
               )}
               {visibleColumns.time10pctSlower && (
-                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   10% Slower
                 </th>
               )}
               {visibleColumns.time5pctSlower && (
-                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   5% Slower
                 </th>
               )}
               {visibleColumns.time && (
-                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider bg-danube/20`}>
+                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder uppercase tracking-widest bg-danube/20`}>
                   Time
                 </th>
               )}
               {visibleColumns.time5pctFaster && (
-                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   5% Faster
                 </th>
               )}
               {visibleColumns.time10pctFaster && (
-                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   10% Faster
                 </th>
               )}
               {visibleColumns.time25pctFaster && (
-                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   25% Faster
                 </th>
               )}
               {visibleColumns.worldRecordMen && (
-                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   Men&apos;s WR
                 </th>
               )}
               {visibleColumns.worldRecordWomen && (
-                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder tracking-wider`}>
+                <th scope="col" className={`${headerPadding} text-center ${fontSize} font-medium text-thunder uppercase tracking-widest`}>
                   Women&apos;s WR
                 </th>
               )}

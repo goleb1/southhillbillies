@@ -61,7 +61,7 @@ export default function OrderForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-thunder mb-1.5">
+        <label htmlFor="name" className="block text-xs uppercase tracking-widest text-thunder/70 mb-1.5">
           Your name <span className="text-red-500">*</span>
         </label>
         <input
@@ -71,12 +71,12 @@ export default function OrderForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="First name is fine"
-          className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-thunder placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-danube focus:border-transparent"
+          className="w-full rounded-md border border-danube/50 px-3 py-2 text-sm text-thunder placeholder-thunder/30 focus:outline-none focus:ring-2 focus:ring-danube focus:border-transparent"
         />
       </div>
 
       <div>
-        <label htmlFor="items" className="block text-sm font-medium text-thunder mb-1.5">
+        <label htmlFor="items" className="block text-xs uppercase tracking-widest text-thunder/70 mb-1.5">
           What do you want? <span className="text-red-500">*</span>
         </label>
         <textarea
@@ -86,12 +86,12 @@ export default function OrderForm() {
           value={items}
           onChange={(e) => setItems(e.target.value)}
           placeholder="e.g. 1 women's singlet size M, 2 stickers, 1 beanie"
-          className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-thunder placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-danube focus:border-transparent resize-none"
+          className="w-full rounded-md border border-danube/50 px-3 py-2 text-sm text-thunder placeholder-thunder/30 focus:outline-none focus:ring-2 focus:ring-danube focus:border-transparent resize-none"
         />
       </div>
 
       <div>
-        <label htmlFor="notes" className="block text-sm font-medium text-thunder mb-1.5">
+        <label htmlFor="notes" className="block text-xs uppercase tracking-widest text-thunder/70 mb-1.5">
           Anything else?
         </label>
         <textarea
@@ -100,7 +100,7 @@ export default function OrderForm() {
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           placeholder="e.g. want a patch sewn on my crewneck, picking up at the track, etc."
-          className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-thunder placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-danube focus:border-transparent resize-none"
+          className="w-full rounded-md border border-danube/50 px-3 py-2 text-sm text-thunder placeholder-thunder/30 focus:outline-none focus:ring-2 focus:ring-danube focus:border-transparent resize-none"
         />
       </div>
 
@@ -117,7 +117,7 @@ export default function OrderForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full bg-chambray hover:bg-danube disabled:opacity-60 text-white font-medium py-2.5 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-danube focus:ring-offset-2 transition-colors"
+        className="w-full bg-chambray hover:bg-danube disabled:opacity-60 text-white uppercase tracking-widest text-xs py-2.5 px-4 rounded focus:outline-none focus:ring-2 focus:ring-danube focus:ring-offset-2 transition-colors"
       >
         {status === 'submitting' ? 'Sending…' : 'Send Order Request'}
       </button>

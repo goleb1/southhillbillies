@@ -40,13 +40,13 @@ export default function Home() {
         {/* Title + calculator card — constrained width */}
         <div className="max-w-sm mx-auto mb-4 sm:mb-6">
         <div className="bg-donkey rounded-t-lg py-4 px-4">
-          <h1 className="text-2xl sm:text-3xl font-bold text-center text-thunder">Pace Conversion Calculator</h1>
+          <h1 className="text-2xl sm:text-3xl font-serif uppercase tracking-wide text-center text-thunder">Pace Conversion Calculator</h1>
         </div>
 
         <div className="bg-white p-3 sm:p-6 rounded-b-lg shadow-md border-x border-b border-danube">
           <div className="flex flex-col gap-3 sm:gap-4 w-full">
             <div>
-              <label className="block text-sm font-medium text-thunder mb-1 sm:mb-2">Distance</label>
+              <label className="block text-xs uppercase tracking-widest text-thunder/70 mb-1 sm:mb-2">Distance</label>
               <DistanceSelector
                 selectedDistance={selectedDistance}
                 onDistanceChange={setSelectedDistance}
@@ -54,7 +54,7 @@ export default function Home() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-thunder mb-1 sm:mb-2">Time</label>
+              <label className="block text-xs uppercase tracking-widest text-thunder/70 mb-1 sm:mb-2">Time</label>
               <TimeInput
                 hours={time.hours}
                 minutes={time.minutes}
@@ -65,7 +65,7 @@ export default function Home() {
 
             <button
               onClick={handleCalculate}
-              className="w-full bg-chambray hover:bg-danube text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-danube focus:ring-offset-2 transition-colors"
+              className="w-full bg-chambray hover:bg-danube text-white uppercase tracking-widest text-xs py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-danube focus:ring-offset-2 transition-colors"
             >
               Calculate
             </button>
@@ -82,10 +82,8 @@ export default function Home() {
 
         <PaceTable results={calculationResults?.results || null} />
 
-        <div className="mt-4 sm:mt-8 text-center text-xs sm:text-sm text-thunder">
-          <p>
-            <em>South Hillbillies A.C. © 2018</em>
-          </p>
+        <div className="mt-4 sm:mt-8 text-center text-thunder/50">
+          <p className="font-serif italic text-sm">South Hillbillies A.C. © 2018</p>
         </div>
       </div>
     </main>

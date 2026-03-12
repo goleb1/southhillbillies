@@ -16,12 +16,12 @@ export default function MerchPage() {
         {/* ── Page header ────────────────────────────────────────────────── */}
         <div className="mb-8">
           <div className="bg-donkey rounded-t-lg py-4 px-4">
-            <h1 className="text-2xl sm:text-3xl font-bold text-center text-thunder">
+            <h1 className="text-2xl sm:text-3xl font-serif uppercase tracking-wide text-center text-thunder">
               Merch
             </h1>
           </div>
           <div className="bg-white rounded-b-lg border-x border-b border-danube px-4 py-3 text-center">
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-thunder/70">
               This is a catalog, not a store. Pick what you want, fill out the form below, and James will sort it out.
             </p>
           </div>
@@ -37,8 +37,8 @@ export default function MerchPage() {
         {/* ── Patch sewing callout ───────────────────────────────────────── */}
         <div className="bg-white border border-danube rounded-lg px-5 py-4 mb-10 flex items-start gap-3">
           <span className="text-2xl flex-shrink-0" aria-hidden>🧵</span>
-          <p className="text-sm text-gray-700">
-            <span className="font-semibold text-thunder">Got something you want a patch on?</span>{' '}
+          <p className="text-sm text-thunder/80">
+            <span className="font-[400] text-thunder">Got something you want a patch on?</span>{' '}
             We can sew it for you, just ask! Works on your own gear or on a made-to-order beanie or crewneck.
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function MerchPage() {
         {/* ── Order form ─────────────────────────────────────────────────── */}
         <div className="max-w-xl mx-auto">
           <div className="bg-donkey rounded-t-lg py-3 px-4">
-            <h2 className="text-lg font-bold text-center text-thunder">Place an Order Request</h2>
+            <h2 className="text-lg font-serif uppercase tracking-wide text-center text-thunder">Place an Order Request</h2>
           </div>
           <div className="bg-white rounded-b-lg border-x border-b border-danube p-5 sm:p-6">
             <OrderForm />
@@ -54,8 +54,8 @@ export default function MerchPage() {
         </div>
 
         {/* ── Footer ────────────────────────────────────────────────────── */}
-        <div className="mt-8 text-center text-xs text-thunder">
-          <p><em>South Hillbillies A.C. © 2018</em></p>
+        <div className="mt-8 text-center text-thunder/50">
+          <p className="font-serif italic text-sm">South Hillbillies A.C. © 2018</p>
         </div>
 
       </div>

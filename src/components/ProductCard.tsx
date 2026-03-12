@@ -26,7 +26,7 @@ function StockBadge({ stock }: { stock: number | 'mto' | ProductVariant[] }) {
 
   if (total === 0) {
     return (
-      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-500">
+      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs uppercase tracking-wider bg-melrose/20 text-thunder/50">
         Sold Out
       </span>
     );
@@ -39,12 +39,12 @@ function StockBadge({ stock }: { stock: number | 'mto' | ProductVariant[] }) {
           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-700">
             Low Stock
           </span>
-          <span className="text-xs text-gray-500">{stock} left</span>
+          <span className="text-xs text-thunder/40">{stock} left</span>
         </span>
       );
     }
     if (stock <= 5) {
-      return <span className="text-xs text-gray-500">{stock} left</span>;
+      return <span className="text-xs text-thunder/40">{stock} left</span>;
     }
   }
 
@@ -68,9 +68,9 @@ function SizeTable({ variants }: { variants: ProductVariant[] }) {
       <table className="w-full text-xs border-collapse">
         <thead>
           <tr>
-            <th className="text-left py-1 pr-2 font-medium text-gray-500 whitespace-nowrap"></th>
+            <th className="text-left py-1 pr-2 uppercase tracking-wider text-thunder/50 whitespace-nowrap"></th>
             {allSizes.map((size) => (
-              <th key={size} className="px-1.5 py-1 text-center font-medium text-gray-500">
+              <th key={size} className="px-1.5 py-1 text-center uppercase tracking-wider text-thunder/50">
                 {size}
               </th>
             ))}
@@ -78,8 +78,8 @@ function SizeTable({ variants }: { variants: ProductVariant[] }) {
         </thead>
         <tbody>
           {variants.map((variant) => (
-            <tr key={variant.label} className="border-t border-gray-100">
-              <td className="py-1.5 pr-2 font-medium text-gray-700 whitespace-nowrap">
+            <tr key={variant.label} className="border-t border-danube/20">
+              <td className="py-1.5 pr-2 font-[400] text-thunder/80 whitespace-nowrap">
                 {variant.label}
               </td>
               {allSizes.map((size) => {
@@ -93,10 +93,10 @@ function SizeTable({ variants }: { variants: ProductVariant[] }) {
                     key={size}
                     className={`px-1.5 py-1.5 text-center rounded ${
                       isNull || isSoldOut
-                        ? 'text-gray-300'
+                        ? 'text-thunder/20'
                         : isLow
-                        ? 'text-orange-600 font-medium'
-                        : 'text-gray-700'
+                        ? 'text-orange-600 font-[400]'
+                        : 'text-thunder/80'
                     }`}
                   >
                     {isNull ? '—' : isSoldOut ? '0' : count}
@@ -119,9 +119,9 @@ export default function ProductCard({ product }: { product: Product }) {
   const isMTO = stock === 'mto';
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+    <div className="bg-white rounded-lg shadow-sm border border-danube/30 overflow-hidden flex flex-col">
       {/* Image */}
-      <div className="relative w-full aspect-[4/3] bg-gray-50">
+      <div className="relative w-full aspect-[4/3] bg-fall/40">
         <Image
           src={image}
           alt={name}
@@ -134,26 +134,26 @@ export default function ProductCard({ product }: { product: Product }) {
       {/* Body */}
       <div className="p-4 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-2 mb-1">
-          <h3 className="font-semibold text-thunder text-base leading-tight">{name}</h3>
+          <h3 className="font-serif text-thunder text-base leading-tight">{name}</h3>
           <span className="text-chambray font-bold text-base whitespace-nowrap">${price}</span>
         </div>
 
         {description && (
-          <p className="text-xs text-gray-500 mb-2">{description}</p>
+          <p className="text-xs text-thunder/60 mb-2">{description}</p>
         )}
 
         <div className="mt-auto pt-2">
           {isSized ? (
             <>
               <SizeTable variants={stock as ProductVariant[]} />
-              <p className="text-xs text-gray-400 mt-1.5">Numbers show units remaining per size</p>
+              <p className="text-xs text-thunder/40 mt-1.5">Numbers show units remaining per size</p>
             </>
           ) : (
             <StockBadge stock={stock} />
           )}
 
           {isMTO && (
-            <p className="text-xs text-gray-500 mt-1.5">
+            <p className="text-xs text-thunder/60 mt-1.5">
               We order the blank and apply the patch.
             </p>
           )}
