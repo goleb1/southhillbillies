@@ -42,7 +42,7 @@ export default function DistanceSelector({ selectedDistance, onDistanceChange }:
       </button>
 
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full rounded-md bg-white shadow-lg max-h-60 overflow-auto border border-danube">
+        <div className="absolute z-50 mt-1 w-full rounded-md bg-white shadow-lg max-h-60 overflow-auto border border-danube">
           <ul className="py-1 text-sm text-thunder">
             {distanceOptions.map((option) => (
               <li

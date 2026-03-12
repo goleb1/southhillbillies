@@ -37,13 +37,14 @@ export default function Home() {
   return (
     <main className="min-h-screen p-3 sm:p-6 bg-fall">
       <div className="max-w-7xl mx-auto pt-4">
-        {/* Title in donkey brown bar */}
+        {/* Title + calculator card — constrained width */}
+        <div className="max-w-sm mx-auto mb-4 sm:mb-6">
         <div className="bg-donkey rounded-t-lg py-4 px-4">
           <h1 className="text-2xl sm:text-3xl font-bold text-center text-thunder">Pace Conversion Calculator</h1>
         </div>
 
-        <div className="bg-white p-3 sm:p-6 rounded-b-lg shadow-md mb-4 sm:mb-6 border-x border-b border-danube">
-          <div className="flex flex-col gap-3 sm:gap-4 max-w-sm mx-auto w-full">
+        <div className="bg-white p-3 sm:p-6 rounded-b-lg shadow-md border-x border-b border-danube">
+          <div className="flex flex-col gap-3 sm:gap-4 w-full">
             <div>
               <label className="block text-sm font-medium text-thunder mb-1 sm:mb-2">Distance</label>
               <DistanceSelector
@@ -77,6 +78,7 @@ export default function Home() {
             />
           )}
         </div>
+        </div>{/* end max-w-sm wrapper */}
 
         <PaceTable results={calculationResults?.results || null} />
 
