@@ -34,7 +34,7 @@ export const inventory: Product[] = [
     image: '/img/singlet_v2.png',
     stock: [
       { label: "Men's",   sizes: { XS: 2, S: 2, M: 2, L: 3 } },
-      { label: "Women's", sizes: { XS: 1, S: 2, M: 4, L: 1 } },
+      { label: "Women's", sizes: { XS: 1, S: 1, M: 4, L: 1 } },
     ],
   },
 
@@ -45,7 +45,7 @@ export const inventory: Product[] = [
     price: 20,
     image: '/img/tshirt.png',
     stock: [
-      { label: "Men's / Unisex", sizes: { XS: 5, S: 5, M: 4, L: 5, XL: 5 } },
+      { label: "Men's / Unisex", sizes: { XS: 5, S: 4, M: 3, L: 5, XL: 5 } },
       { label: "Women's Cut",    sizes: { XS: null, S: 3, M: null, L: 1, XL: null } },
     ],
   },
@@ -77,7 +77,7 @@ export const inventory: Product[] = [
     price: 5,
     image: '/img/bandana.png',
     description: 'Lightweight 22"x22" bandana bearing all things SHB.',
-    stock: 21,
+    stock: 20,
   },
 
   // ── Koozie ─────────────────────────────────────────────────────────────────
@@ -87,7 +87,7 @@ export const inventory: Product[] = [
     price: 5,
     image: '/img/koozie.png',
     description: 'Neoprene koozie to keep your drinks cold and/or your hands warm.',
-    stock: 14,
+    stock: 13,
   },
 
   // ── Big Patch ──────────────────────────────────────────────────────────────
@@ -117,6 +117,6 @@ export const inventory: Product[] = [
     price: 1,
     image: '/img/sticker.png',
     description: '3" vinyl sticker.',
-    stock: 24,
+    stock: 22,
   },
 ];
